@@ -3,7 +3,15 @@
 ## Overview
 **SpellGraph** is a node-based RPG ability creation tool made in Unity using the GraphView API. It allows developers to easily create abilities without the need for scripting and can be repurposed to suit various project needs.
 <br><br>SpellGraph comes with an additional tool, **RealmsTool**, which allows to visualize and manage custom data types in Unity. Both tools can be used separately and you can opt not to install RealmsTool when importing the .unitypackage.
-<br><br>It was developed using the Unity GraphView API, which may be subject to changes in the future. The current release was developed and tested for Unity version 2022.3.7f1.
+<br><br>It was developed using the Unity GraphView API, which may be subject to changes in the future. The current release was developed and tested for Unity version 2022.3.7f1.<br><br>
+
+<div style="text-align:center;">
+  <img src="Media/SpellGraph.png" alt="SpellGraph" style="width: 100%; max-width: 600px;"/>
+  <div>
+    <img src="Media/RealmsToolBanner.png" alt="Realms Tool banner" style="width: 45%; max-width: 250px; display: inline-block;"/>
+    <img src="Media/RealmsTool.png" alt="Realms Tool" style="width: 45%; max-width: 250px; display: inline-block;"/>
+  </div>
+</div>
 
 ## Features
 - **User-friendly node-based Interface**: Create complex abilities without writing a single line of code.
