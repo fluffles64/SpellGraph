@@ -218,6 +218,9 @@ The nodes can be found under `Assets > SpellGraph > GraphView > Runtime > NodeLi
     }
     ```
 
+## Project Structure
+The architecture of the *SpellGraph* tool is quite complex, as can be appreciated in [Project Structure SVG](Media/SpellGraph.svg?raw=true).
+Many design decisions are based on the OOP paradigm, following best practices and design patterns.
 ## Installation
 1. **Clone the repository**:
 
@@ -246,11 +249,11 @@ The nodes can be found under `Assets > SpellGraph > GraphView > Runtime > NodeLi
 
 3. **Execute Effects**:
     - To test the abilities at runtime, you need to use the `ExecuteEffect` class. It contains a node-traversing algorithm that sequentially executes the logic found in the runtime part of the nodes.
-    - Following the Spellgraph ecosystem, when executing an ability in your game, say, in the `Hero` class, you would need to call the `Activate()` method found in the `Ability` class, which creates a new instance of the `ExecuteEffect` class, triggering the entire `Effect`.<br><br>
+    - Following the *Spellgraph* ecosystem, when executing an ability in your game, say, in the `Hero` class, you would need to call the `Activate()` method found in the `Ability` class, which creates a new instance of the `ExecuteEffect` class, triggering the entire `Effect`.<br><br>
 
 **Disclaimer:** After thorough testing and examination, when profiling the application and comparing the SpellGraph visual scripting solution VS. the same abilities coded manually, the conclusion is that when executing hundreds of effects at once, the visual scripted solution is notably slower than manually coding the abilities. This is because instantiating hundreds of `ExecuteEffect` classes adds a considerable amount of work for the Garbage Collector (heap) and ends up adding ms to the frame the ability was triggered. If optimization is a priority, the traversal algorithm in the `ExecuteEffect` class should be revised, with strong graph theory and multithreading knowledge. However, this is still a very viable approach for games that don't need to trigger hundreds of abilities aren't at once, and should be a fitting solution for many single player projects.<br><br>
 
-**Use cases**: This project has many uses apart from designing custom abilities. The framework can be used for many things, from dialogue systems, to creating visual state machines for AI in your game. The possibilities are endless!.
+**Use cases**: This project has many uses apart from designing custom abilities, as shown in the video. The framework can be used for many things, from dialogue systems, to creating visual state machines for AI in your game. The possibilities are endless!.
 
 ## Contributing
 
