@@ -1,9 +1,9 @@
 # SpellGraph
 
 ## Overview
-**SpellGraph** is a node-based RPG ability creation tool made in Unity using the GraphView API. It allows developers to easily create abilities without the need for scripting and can be repurposed to suit various project needs.
-<br><br>SpellGraph comes with an additional tool, **RealmsTool**, which allows you to visualize and manage custom data types in Unity. Both tools can be used separately and you can opt not to install RealmsTool when importing the .unitypackage.
-<br><br>It was developed using the Unity [GraphView API](https://docs.unity3d.com/ScriptReference/Experimental.GraphView.GraphView.html), which may be subject to changes in the future. The current release was developed and tested for Unity version 2022.3.7f1.
+**SpellGraph** is a node-based RPG ability creation tool made in the Unity engine. It allows developers to easily create abilities without the need for scripting and can be repurposed to suit various project needs.
+<br><br>SpellGraph comes with an additional helper tool, **RealmsTool**, which allows you to visualize and manage custom data types in Unity. Both tools can be used separately and you can opt not to install RealmsTool when importing the .unitypackage.
+<br><br>It was developed using the [Unity GraphView API](https://docs.unity3d.com/ScriptReference/Experimental.GraphView.GraphView.html), which may be subject to changes in the future. The current release was developed and tested for Unity version 2022.3.7f1.
 
 ## Media
 <div style="text-align:center;">
@@ -13,6 +13,10 @@
     <img src="Media/RealmsTool.png" alt="Realms Tool" style="width: 49%; max-width: 300px;"/>
   </div>
 </div>
+
+https://github.com/fluffles64/SpellGraph/assets/61605339/7d5e01b0-ac3b-4eaa-9306-46375a23e009
+
+*Disclaimer*: This video shows a practical application of the SpellGraph framework. All four abilities shown in the video were fully created using nodes. The contents shown in the video are from a personal project and may contain copyrighted content.
 
 ## Features
 - **User-friendly node-based Interface**: Create complex abilities without writing a single line of code.
@@ -47,12 +51,12 @@ The nodes can be found under `Assets > SpellGraph > GraphView > Runtime > NodeLi
 | `ExtendedNode` | Node, INodeData | Base class all nodes must extend from. |
 | `RootNode` | ExtendedNode | Sends an output pulse whenever the effect triggers. Always present by default and cannot be moved or deleted. |
 | `NodeGroup` | Group | Organizes nodes inside. Its title can be edited. |
-| `VariableNode` | ExtendedNode | Special pill-like nodes representing instance variables. They can be dragged and dropped from the blackboard. |
+| `VariableNode` | ExtendedNode | Special pill-like nodes representing instance variables. They can be dragged and dropped from the Blackboard. |
 | **General** |
-| `DebugNode` | ActionNode | Takes a generic value as input and debugs its value in the console when it triggers. |
+| `DebugNode` | ActionNode | Takes a generic value as an input and prints its value in the console when it triggers. |
 | `SetVarNode` | ActionNode | Dynamically selects a variable from the blackboard and assigns it a generic value determined by the input. |
 | **Conditional** |
-| `BoolNode` | ConditionNode | Splits the flow of execution depending on the value of an input boolean. |
+| `BoolNode` | ConditionNode | Splits the flow of execution depending on the value of a boolean input. |
 | `ComparisonNode` | ActionNode | Compares two float/int values (`<`, `>`, `<=`, `>=`, `==`, `!=`) and returns a boolean. |
 | **Math/Basic** |
 | `AddNode` | ActionNode | Returns the sum of two input values. |
@@ -62,14 +66,14 @@ The nodes can be found under `Assets > SpellGraph > GraphView > Runtime > NodeLi
 | `PowerNode` | ActionNode | Returns the result of input A to the power of input B. |
 | `SquareRootNode` | ActionNode | Returns the square root of input A. |
 | **Events** |
-| `OnAutoAttackNode` | EventNode | Sends out a pulse whenever the player auto attacks. |
+| `OnAutoAttackNode` | EventNode | Sends out a pulse whenever the player auto-attacks. |
 | **Time** |
 | `BuffNode` | ActionNode | Adds a buff or debuff icon to the top right side of the player’s screen, showing its remaining duration and a tooltip. |
 | `WaitNode` | StateNode | Waits for x seconds. |
 | **Combat** |
 | `DamageNode` | ActionNode | Deals X physical/magic/true damage to the player. Returns the resulting value. |
 | `DOTNode` | ActionNode | Deals X physical/magic/true damage over time in the form of ticks, over a duration of Y seconds, at a rate of Z seconds. It can stack over similar effects. |
-| `ResetAutoAttackNode` | ActionNode | Resets the auto attack timer of the player. |
+| `ResetAutoAttackNode` | ActionNode | Resets the auto-attack timer of the player. |
 | `TeleportNode` | ActionNode | Teleports the player to a given position or to a position relative to its target. |
 | **Stats** |
 | `GetStatNode` | ActionNode | Returns the current value of any given stat in either the player or its target. |
@@ -77,7 +81,7 @@ The nodes can be found under `Assets > SpellGraph > GraphView > Runtime > NodeLi
 | **SFX** |
 | `SFXNode` | ActionNode | Plays a random audio clip from a given list. For each audio clip, its pitch and volume can be changed. |
 | **VFX** |
-| `VFXNode` | ActionNode | Spawns a GameObject prefab on a child transform of a prefab for a set amount of time. For it to work, the specified bone must have the “VFXTransform” tag. |
+| `VFXNode` | ActionNode | Spawns a GameObject prefab on a child transform of a prefab for a set amount of time. For it to work, the specified bone needs to have the “VFXTransform” tag. |
 | `AnimationNode` | ActionNode | Plays one shot of an animation given an animation controller. Its duration can be specified. |
 
 ## Creating a node
@@ -208,7 +212,7 @@ The nodes can be found under `Assets > SpellGraph > GraphView > Runtime > NodeLi
     {
         public override object Action(List<object> portValues, NodeData nodeData)
         {
-            /// ...
+            // ...
             return null;
         }
     }
