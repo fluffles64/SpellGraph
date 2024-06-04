@@ -2,14 +2,15 @@
 
 ## Overview
 **SpellGraph** is a node-based RPG ability creation tool made in Unity using the GraphView API. It allows developers to easily create abilities without the need for scripting and can be repurposed to suit various project needs.
-<br><br>SpellGraph comes with an additional tool, **RealmsTool**, which allows to visualize and manage custom data types in Unity. Both tools can be used separately and you can opt not to install RealmsTool when importing the .unitypackage.
-<br><br>It was developed using the Unity GraphView API, which may be subject to changes in the future. The current release was developed and tested for Unity version 2022.3.7f1.<br><br>
+<br><br>SpellGraph comes with an additional tool, **RealmsTool**, which allows you to visualize and manage custom data types in Unity. Both tools can be used separately and you can opt not to install RealmsTool when importing the .unitypackage.
+<br><br>It was developed using the Unity [GraphView API](https://docs.unity3d.com/ScriptReference/Experimental.GraphView.GraphView.html), which may be subject to changes in the future. The current release was developed and tested for Unity version 2022.3.7f1.
 
+## Media
 <div style="text-align:center;">
   <img src="Media/SpellGraph.png" alt="SpellGraph" style="width: 100%; max-width: 600px;"/>
-  <div>
-    <img src="Media/RealmsToolBanner.png" alt="Realms Tool banner" style="width: 45%; max-width: 250px; display: inline-block;"/>
-    <img src="Media/RealmsTool.png" alt="Realms Tool" style="width: 45%; max-width: 250px; display: inline-block;"/>
+  <div style="display:flex; justify-content:center;">
+    <img src="Media/RealmsToolBanner.png" alt="Realms Tool banner" style="width: 50%; max-width: 300px;"/>
+    <img src="Media/RealmsTool.png" alt="Realms Tool" style="width: 49%; max-width: 300px;"/>
   </div>
 </div>
 
@@ -39,7 +40,7 @@
   - Groups
 
 ## Node documentation
-
+The nodes can be found under `Assets > SpellGraph > GraphView > Runtime > NodeLibrary`. You can utilize them as they are or use them as reference to create new nodes. Note that a significant portion of the runtime part of the nodes is commented, as these nodes are being used in a personal project, which led to external dependencies.
 | **Name** | **Type** | **Description** |
 |----------|----------|-----------------|
 | **Special** |
@@ -79,12 +80,148 @@
 | `VFXNode` | ActionNode | Spawns a GameObject prefab on a child transform of a prefab for a set amount of time. For it to work, the specified bone must have the “VFXTransform” tag. |
 | `AnimationNode` | ActionNode | Plays one shot of an animation given an animation controller. Its duration can be specified. |
 
+## Creating a node
+1. **Create a new script**
+    - Go to `Assets > SpellGraph > GraphView > Runtime > NodeLibrary`.
+    - Name it adequately and put it under an appropriate category.
+
+2. **If the node is simple (only ports)**:
+   - Make the newly created class extend from the "ExtendedNode" class.
+   - Add the `[NodeInfo("Name", "Path", "Description")]` attribute so that the node library search window can find it.
+   - To create input/output ports, use the `[InputPort("Name")]` or the `[OutputPort("Name")]` attributes, respectively.
+   - The input/output port attributes will automatically color code ports based on the types of the variables below them.
+   - Wrap the whole class around `#if UNITY_EDITOR #endif` clauses. 
+   - Create a separate runtime node. **IMPORTANT!** Name it the same as the original class but with "Runtime" in front.
+   - Make this runtime node extend from any of the runtime node types: ActionNode, StateNode, ConditionNode or EventNode.
+   - Finally, override the abstract methods of these classes, and implement the logic of when the node triggers inside. Should the node relay its result to other nodes, don't forget to return that value.
+   - You can use the `GetPortValue<T>(portValues[portNum])` method to retrieve input port values and make sure they are never null.<br><br>
+
+    ```csharp
+    #if UNITY_EDITOR
+    [NodeInfo("Add", "Math/Basic", "Returns the sum of the two input values.")]
+    public class MathBasicAddNode : ExtendedNode
+    {
+        [InputPort("A")]
+        public float A;
+    
+        [InputPort("B")]
+        public float B;
+    
+        [OutputPort("Output")]
+        public float Output;
+    }
+    #endif
+    
+    public class RuntimeMathBasicAddNode : ActionNode
+    {
+        public override object Action(List<object> portValues, NodeData nodeData)
+        {
+            float a = GetPortValue<float>(portValues[0]);
+            float b = GetPortValue<float>(portValues[1]);
+    
+            return a + b;
+        }
+    }
+    ```
+
+2. **If the node is complex (has elements that need to be saved, i.e. dropdown containers...)**:
+   - Create both classes (editor and runtime) just like before.
+   - Create a new class containing the elements you need to save, and make it extend the `NodeData` class.
+   - In the constructor of the editor node, add all the visual elements you need to. You can implement them yourself, or you can utilize generic helper methods from the `ExtendedNode` class.
+   - Editor nodes that contain information that needs to be saved between editor sessions all need to implement the `INodeData` interface.
+   - Override the `SetValues()` and `GetNodeData()` methods from `ExtendedNode`, which inherits from `INodeData`.
+   - In the `SetValues()` method, initialize the custom values (i.e. dropdowns). This method is called whenever the `Load` button is pressed in the SpellGraph toolbar.
+   - In the `GetNodeData()` method, set all the values. This method is called whenever the `Save` button is pressed in the toolbar. You will need to always set the following values: `Id`, `Position`, `DataType`, `EditorType`, `RuntimeType`, `InputPortNames`, `OutputPortNames`. Then, set the custom values to the current values of the variables created in the editor node. **IMPORTANT!** Remember to set `DataType` to the custom `NodeData` type class created earlier.
+   - To make organizing easier, you can put these two overridden methods inside `#region INodeData #endregion`.
+   - Finally, implement the runtime node as always.<br><br>
+
+    ```csharp
+    public class StatNodeData : NodeData
+    {
+        public string Target;
+        public string Stat;
+    }
+    
+    #if UNITY_EDITOR
+    [NodeInfo("Get Stat", "Stats", "Gets the stats of a target")]
+    public class GetStatNode : ExtendedNode
+    {
+        private string selectedTarget = "Player";
+        private string selectedStat = "Health";
+        private string[] targets = Enum.GetNames(typeof(CurrentTargetType));
+        private string[] stats = Enum.GetNames(typeof(StatType));
+    
+        [OutputPort("Value")]
+        public float Value;
+    
+        [InputPort("In")]
+        public Trigger Input;
+    
+        [OutputPort("Out")]
+        public Trigger Output;
+    
+        public GetStatNode()
+        {
+            VisualElement targetDropdown = DropdownContainer("Target", selectedTarget, targets, newValue => selectedTarget = newValue);
+            titleContainer.Add(targetDropdown);
+    
+            VisualElement statDropdown = DropdownContainer("Stat", selectedStat, stats, newValue => selectedStat = newValue);
+            extensionContainer.Add(statDropdown);
+        }
+    
+        #region INodeData
+        public override void SetValues(NodeData data)
+        {
+            if (data is StatNodeData nodeData)
+            {
+                selectedTarget = nodeData.Target;
+                selectedStat = nodeData.Stat;
+            }
+    
+            DropdownField targetDropdown = titleContainer.Q<DropdownField>();
+            targetDropdown?.SetValueWithoutNotify(selectedTarget);
+    
+            DropdownField statDropdown = extensionContainer.Q<DropdownField>();
+            statDropdown?.SetValueWithoutNotify(selectedStat);
+        }
+    
+        public override object GetNodeData()
+        {
+            return new StatNodeData
+            {
+                Id = Id,
+                Position = GetPosition().position,
+                DataType = new SerializableSystemType(typeof(StatNodeData)),
+                EditorType = new SerializableSystemType(GetType()),
+                RuntimeType = new SerializableSystemType(GetRuntimeType()),
+                InputPortNames = GetInputPortNames(),
+                OutputPortNames = GetOutputPortNames(),
+                Target = selectedTarget,
+                Stat = selectedStat
+            };
+        }
+        #endregion
+    }
+    #endif
+    
+    public class RuntimeGetStatNode : ActionNode
+    {
+        public override object Action(List<object> portValues, NodeData nodeData)
+        {
+            /// ...
+            return null;
+        }
+    }
+    ```
+
 ## Installation
 1. **Clone the repository**:
+
     ```bash
     git clone https://github.com/fluffles64/SpellGraph.git
     ```
-2. **Import the Package directly into Unity**:
+    
+3. **Import the Package directly into Unity**:
     - Download the latest `.unitypackage` from the [Releases](https://github.com/fluffles64/SpellGraph/releases) page.
     - Open your Unity project.
     - Go to `Assets > Import Package > Custom Package...`.
@@ -93,6 +230,7 @@
 ## Usage
 1. **Open the SpellGraph Editor**:
     - Navigate to `Tools > SpellGraph` in the Unity menu.
+
 2. **Create Abilities**:
     - Use the node-based interface to create and connect nodes.
     - Press space to open the node library search window.
@@ -100,22 +238,38 @@
     - Copy paste with Ctrl+C/Ctrl+V
     - Drag and drop instance variables into the editor window.
     - Double click an instance variable in the Blackboard to rename it.
-    - Save and test your abilities within your game.
+    - Save the newly created ability.
+
+3. **Execute Effects**:
+    - To test the abilities at runtime, you need to use the `ExecuteEffect` class. It contains a node-traversing algorithm that sequentially executes the logic found in the runtime part of the nodes.
+    - Following the Spellgraph ecosystem, when executing an ability in your game, say, in the `Hero` class, you would need to call the `Activate()` method found in the `Ability` class, which creates a new instance of the `ExecuteEffect` class, triggering the entire `Effect`.<br><br>
+
+**Disclaimer:** After thorough testing and examination, when profiling the application and comparing the SpellGraph visual scripting solution VS. the same abilities coded manually, the conclusion is that when executing hundreds of effects at once, the visual scripted solution is notably slower than manually coding the abilities. This is because instantiating hundreds of `ExecuteEffect` classes adds a considerable amount of work for the Garbage Collector (heap) and ends up adding ms to the frame the ability was triggered. If optimization is a priority, the traversal algorithm in the `ExecuteEffect` class should be revised, with strong graph theory and multithreading knowledge. However, this is still a very viable approach for games that don't need to trigger hundreds of abilities aren't at once, and should be a fitting solution for many single player projects.<br><br>
+
+**Use cases**: This project has many uses apart from designing custom abilities. The framework can be used for many things, from dialogue systems, to creating visual state machines for AI in your game. The possibilities are endless!.
 
 ## Contributing
+
 1. **Fork the repository**.
+
 2. **Create a new branch**:
+
     ```bash
     git checkout -b feature/YourFeature
     ```
+
 3. **Commit your changes**:
+
     ```bash
     git commit -m 'Add some feature'
     ```
+
 4. **Push to the branch**:
+
     ```bash
     git push origin feature/YourFeature
     ```
+
 5. **Open a pull request**.
 
 ## License
