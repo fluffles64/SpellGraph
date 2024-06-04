@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2f009fc3f113d418d140e0f33852c5, type: 3}
+  m_Name: Strike
+  m_EditorClassIdentifier: 
+  InstanceVariables:
+  - rid: 3701608407913988884
+  Nodes:
+  - rid: 3701608407913988885
+  - rid: 3701608407913988886
+  - rid: 3701608407913988887
+  - rid: 3701608407913988888
+  - rid: 3701608407913988889
+  - rid: 3701608407913988890
+  Links:
+  - BaseId: be093dda-b3f9-49ba-bdd0-31bec4c612db
+    TargetId: 190641fa-d84e-48f4-a21c-86ed6cd40b09
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: 30dc3bb4-4802-4e6a-9449-28609865a28b
+    TargetId: 190641fa-d84e-48f4-a21c-86ed6cd40b09
+    BasePortName: Float
+    TargetPortName: Value
+  - BaseId: 190641fa-d84e-48f4-a21c-86ed6cd40b09
+    TargetId: 3d127c6a-a944-4e18-abd7-b9b7a970979c
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: 31a87345-2661-4b4a-86ee-1caaa12169aa
+    TargetId: 73296aa9-97db-40ab-88da-a099e294aa7e
+    BasePortName: Active
+    TargetPortName: In
+  - BaseId: 73296aa9-97db-40ab-88da-a099e294aa7e
+    TargetId: be093dda-b3f9-49ba-bdd0-31bec4c612db
+    BasePortName: Out
+    TargetPortName: In
+  Groups: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 3701608407913988884
+      type: {class: InstanceVariableFloat, ns: , asm: Assembly-CSharp}
+      data:
+        Name: Float
+        Value: 20
+    - rid: 3701608407913988885
+      type: {class: NodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 31a87345-2661-4b4a-86ee-1caaa12169aa
+        Position: {x: 300, y: 250.00002}
+        DataType:
+          m_AssemblyQualifiedName: NodeData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: RootNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeRootNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames:
+        - Active
+    - rid: 3701608407913988886
+      type: {class: VFXNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: be093dda-b3f9-49ba-bdd0-31bec4c612db
+        Position: {x: 818, y: 262}
+        DataType:
+          m_AssemblyQualifiedName: VFXNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: VFXNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeVFXNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        Duration: 1
+        VFX: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
+        Prefab: {fileID: 3127757936071797935, guid: b66a97f811850034f9c8a4eb1f271205, type: 3}
+        TransformName: character/scourge/male/scourgemale_hd_bone_122
+    - rid: 3701608407913988887
+      type: {class: VarNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 30dc3bb4-4802-4e6a-9449-28609865a28b
+        Position: {x: 1126.6666, y: 222}
+        DataType:
+          m_AssemblyQualifiedName: VarNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: VariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeVariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        VarName: Float
+        VarType:
+          m_AssemblyQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+    - rid: 3701608407913988888
+      type: {class: NodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 3d127c6a-a944-4e18-abd7-b9b7a970979c
+        Position: {x: 1466, y: 208.66667}
+        DataType:
+          m_AssemblyQualifiedName: NodeData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: CombatResetAutoAttackNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeCombatResetAutoAttackNode, Assembly-CSharp,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+    - rid: 3701608407913988889
+      type: {class: DamageNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 190641fa-d84e-48f4-a21c-86ed6cd40b09
+        Position: {x: 1210, y: 300.66666}
+        DataType:
+          m_AssemblyQualifiedName: DamageNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: CombatDamageNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeCombatDamageNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames:
+        - Value
+        OutputPortNames:
+        - Caused damage
+        DamageType: Physical
+    - rid: 3701608407913988890
+      type: {class: SFXNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 73296aa9-97db-40ab-88da-a099e294aa7e
+        Position: {x: 436.66666, y: 267.3333}
+        DataType:
+          m_AssemblyQualifiedName: SFXNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: SFXNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeSFXNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        AudioSettings:
+        - audioClip: {fileID: 8300000, guid: 020dba1e9af733b48a62b2f51c4a218f, type: 3}
+          pitchVariation: {x: -0.05, y: 0.05}
+          volume: 30.3
+        - audioClip: {fileID: 8300000, guid: 5d2a254365f911d40995fb9768133e2d, type: 3}
+          pitchVariation: {x: -0.05, y: 0.05}
+          volume: 34.8
+        - audioClip: {fileID: 8300000, guid: cbf7d897f8ce4b040a288a3188bd6ddf, type: 3}
+          pitchVariation: {x: -0.05, y: 0.05}
+          volume: 34.8
+        - audioClip: {fileID: 8300000, guid: 9f67189c51ad8ae41991f3bc3338bf50, type: 3}
+          pitchVariation: {x: -0.05, y: 0.05}
+          volume: 37
+        - audioClip: {fileID: 8300000, guid: 871caedbc3013d44c8c0ffe2e6facf7c, type: 3}
+          pitchVariation: {x: -0.05, y: 0.05}
+          volume: 38.2

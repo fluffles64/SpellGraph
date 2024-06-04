@@ -1,0 +1,45 @@
+.unity-port-trigger {
+    background-color: green;
+    color: white;
+}
+
+.unity-port-passive-trigger {
+    background-color: red;
+    color: white;
+}
+
+.var-node__title-container {
+    margin-left: -40px;
+    margin-right: 0px;
+    padding-top: 5px;
+    color: #3498db;
+    font-size: 30px;
+}
+
+.extension-container {
+	padding-top: 4;
+	padding-left: 4;
+	padding-right: 4;
+	padding-bottom: 4;
+    background-color: rgb(57, 57, 57);
+}
+
+NodeSettingsView {
+	width: 232;
+	position-type: absolute;
+	slice-top: 40;
+	slice-left: 80;
+	slice-right: 25;
+	slice-bottom: 25;
+	padding-top: 15;
+	padding-left: 4;
+	padding-right: 4;
+	padding-bottom: 4;
+}
+
+NodeSettingsView > #mainContainer {
+	padding-top: 4;
+	padding-left: 4;
+	padding-right: 4;
+	padding-bottom: 4;
+}

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3fa31756bb348224f93e3b5b10182225
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_ViewDataDictionary: {instanceID: 0}
+  - frizQuadrata: {instanceID: 0}
+  - cabin: {instanceID: 0}
+  - backgroundImage: {instanceID: 0}
+  - defaultIcon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,900 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2f009fc3f113d418d140e0f33852c5, type: 3}
+  m_Name: Backstab
+  m_EditorClassIdentifier: 
+  InstanceVariables:
+  - rid: 3701608415716442161
+  - rid: 3701608415716442162
+  - rid: 3701608415716442163
+  - rid: 3701608415716442164
+  - rid: 3701608415716442165
+  - rid: 3701608415716442166
+  - rid: 3701608415716442167
+  - rid: 3701608415716442168
+  - rid: 3701608415716442169
+  Nodes:
+  - rid: 3701608415716442170
+  - rid: 3701608415716442171
+  - rid: 3701608415716442172
+  - rid: 3701608415716442173
+  - rid: 3701608415716442174
+  - rid: 3701608415716442175
+  - rid: 3701608415716442176
+  - rid: 3701608415716442177
+  - rid: 3701608415716442178
+  - rid: 3701608415716442179
+  - rid: 3701608415716442180
+  - rid: 3701608415716442181
+  - rid: 3701608415716442182
+  - rid: 3701608415716442183
+  - rid: 3701608415716442184
+  - rid: 3701608415716442185
+  - rid: 3701608415716442186
+  - rid: 3701608415716442187
+  - rid: 3701608415716442188
+  - rid: 3701608415716442189
+  - rid: 3701608415716442190
+  - rid: 3701608415716442191
+  - rid: 3701608415716442192
+  - rid: 3701608415716442193
+  - rid: 3701608415716442194
+  - rid: 3701608415716442195
+  - rid: 3701608415716442196
+  - rid: 3701608415716442197
+  - rid: 3701608415716442198
+  - rid: 3701608415716442199
+  Links:
+  - BaseId: b7af2454-60e3-4841-8b0b-2814f89dd59c
+    TargetId: 7113c8b6-e910-4669-9399-8405cd1f4f97
+    BasePortName: Active
+    TargetPortName: In
+  - BaseId: 361482fc-2902-4860-b101-3616ed26ffd5
+    TargetId: 8e1af2cd-3a65-422f-a59d-c8e0d567b671
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: 8e1af2cd-3a65-422f-a59d-c8e0d567b671
+    TargetId: 841b9e51-5fdb-4e1f-bccb-04868e927257
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: 841b9e51-5fdb-4e1f-bccb-04868e927257
+    TargetId: 8717d959-33b3-4ac8-9bc6-77383d6b769f
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: 841b9e51-5fdb-4e1f-bccb-04868e927257
+    TargetId: 6fbead8c-87cc-4dd3-9529-26fced1dd97b
+    BasePortName: Value
+    TargetPortName: B
+  - BaseId: 8717d959-33b3-4ac8-9bc6-77383d6b769f
+    TargetId: 43b91629-ddcc-4a97-999c-b66ffe0e2452
+    BasePortName: Old Value
+    TargetPortName: Value
+  - BaseId: 8717d959-33b3-4ac8-9bc6-77383d6b769f
+    TargetId: a335d7ae-02cd-45dc-9f6b-9c4ffc070b81
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: 6fbead8c-87cc-4dd3-9529-26fced1dd97b
+    TargetId: 8717d959-33b3-4ac8-9bc6-77383d6b769f
+    BasePortName: Output
+    TargetPortName: Value
+  - BaseId: c4dde53f-3916-4565-a0ed-c740cc4cbb01
+    TargetId: 6fbead8c-87cc-4dd3-9529-26fced1dd97b
+    BasePortName: BonusAd
+    TargetPortName: A
+  - BaseId: 8950cb2a-232b-4c44-83c8-b5243e3b1d12
+    TargetId: 112f6b9b-c45c-4f55-8e2d-b4dbe1f685fb
+    BasePortName: Counter
+    TargetPortName: A
+  - BaseId: 3b381d75-7942-4e3a-9764-28897a7980e5
+    TargetId: 112f6b9b-c45c-4f55-8e2d-b4dbe1f685fb
+    BasePortName: Float
+    TargetPortName: B
+  - BaseId: 112f6b9b-c45c-4f55-8e2d-b4dbe1f685fb
+    TargetId: ebfb5a4e-ed24-4740-b0a0-32202d102144
+    BasePortName: Bool
+    TargetPortName: Bool
+  - BaseId: ebfb5a4e-ed24-4740-b0a0-32202d102144
+    TargetId: 361482fc-2902-4860-b101-3616ed26ffd5
+    BasePortName: False
+    TargetPortName: In
+  - BaseId: ebfb5a4e-ed24-4740-b0a0-32202d102144
+    TargetId: f7e3bdf6-5eda-40d6-9380-e05958db2635
+    BasePortName: True
+    TargetPortName: In
+  - BaseId: c8c155fb-7db4-4139-80c4-f91b85d9cbd7
+    TargetId: 112f6b9b-c45c-4f55-8e2d-b4dbe1f685fb
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: c8c155fb-7db4-4139-80c4-f91b85d9cbd7
+    TargetId: ebfb5a4e-ed24-4740-b0a0-32202d102144
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: 7113c8b6-e910-4669-9399-8405cd1f4f97
+    TargetId: d57f9191-43ec-4907-a314-2bcc0fcae848
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: d57f9191-43ec-4907-a314-2bcc0fcae848
+    TargetId: c8c155fb-7db4-4139-80c4-f91b85d9cbd7
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: 59b712e0-4892-438e-8d77-9f9a0df1c3f5
+    TargetId: d57f9191-43ec-4907-a314-2bcc0fcae848
+    BasePortName: Damage
+    TargetPortName: Value
+  - BaseId: 44ef9c0f-fe56-49f2-b165-171d58352fd2
+    TargetId: 43b91629-ddcc-4a97-999c-b66ffe0e2452
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: 44ef9c0f-fe56-49f2-b165-171d58352fd2
+    TargetId: 4cc49b3c-bc6f-4b07-b33e-5ea1b27edd7c
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: 985dba69-43eb-44e6-b071-71a65e81f2bb
+    TargetId: 44ef9c0f-fe56-49f2-b165-171d58352fd2
+    BasePortName: 3
+    TargetPortName: Time
+  - BaseId: a335d7ae-02cd-45dc-9f6b-9c4ffc070b81
+    TargetId: ea94db15-5ee7-443d-9ced-8ff6d5833d72
+    BasePortName: Value
+    TargetPortName: A
+  - BaseId: a335d7ae-02cd-45dc-9f6b-9c4ffc070b81
+    TargetId: bcb14d46-19a3-4594-b4c9-a4ae2a074e86
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: bcb14d46-19a3-4594-b4c9-a4ae2a074e86
+    TargetId: bc77c026-09a8-4574-ad79-56d93acf6a0f
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: bcb14d46-19a3-4594-b4c9-a4ae2a074e86
+    TargetId: 4cc49b3c-bc6f-4b07-b33e-5ea1b27edd7c
+    BasePortName: Old Value
+    TargetPortName: Value
+  - BaseId: ea94db15-5ee7-443d-9ced-8ff6d5833d72
+    TargetId: bcb14d46-19a3-4594-b4c9-a4ae2a074e86
+    BasePortName: Output
+    TargetPortName: Value
+  - BaseId: c318185e-b2da-49f4-98a6-316185eed2ba
+    TargetId: ea94db15-5ee7-443d-9ced-8ff6d5833d72
+    BasePortName: BonusAs
+    TargetPortName: B
+  - BaseId: bc77c026-09a8-4574-ad79-56d93acf6a0f
+    TargetId: 44ef9c0f-fe56-49f2-b165-171d58352fd2
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: f884e50e-5db6-40ad-b8c4-ebfa6db56614
+    TargetId: bc77c026-09a8-4574-ad79-56d93acf6a0f
+    BasePortName: 0
+    TargetPortName: Value
+  - BaseId: f7e3bdf6-5eda-40d6-9380-e05958db2635
+    TargetId: 09388f04-4221-4bc2-a61c-08073e6bd1d1
+    BasePortName: Out
+    TargetPortName: In
+  - BaseId: 9719931f-4cdd-457d-8172-d32cbccc59ff
+    TargetId: 8c2c756d-6bed-40c3-a06c-8024f5641dea
+    BasePortName: 1
+    TargetPortName: B
+  - BaseId: 7f3bdf22-3065-4204-9355-33fe8913fb2d
+    TargetId: 8c2c756d-6bed-40c3-a06c-8024f5641dea
+    BasePortName: Counter
+    TargetPortName: A
+  - BaseId: 8c2c756d-6bed-40c3-a06c-8024f5641dea
+    TargetId: 09388f04-4221-4bc2-a61c-08073e6bd1d1
+    BasePortName: Output
+    TargetPortName: Value
+  Groups: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 3701608415716442161
+      type: {class: InstanceVariableFloat, ns: , asm: Assembly-CSharp}
+      data:
+        Name: BonusAd
+        Value: 50
+    - rid: 3701608415716442162
+      type: {class: InstanceVariableFloat, ns: , asm: Assembly-CSharp}
+      data:
+        Name: Counter
+        Value: 0
+    - rid: 3701608415716442163
+      type: {class: InstanceVariableFloat, ns: , asm: Assembly-CSharp}
+      data:
+        Name: 1
+        Value: 1
+    - rid: 3701608415716442164
+      type: {class: InstanceVariableFloat, ns: , asm: Assembly-CSharp}
+      data:
+        Name: 0
+        Value: 0
+    - rid: 3701608415716442165
+      type: {class: InstanceVariableFloat, ns: , asm: Assembly-CSharp}
+      data:
+        Name: 3
+        Value: 3
+    - rid: 3701608415716442166
+      type: {class: InstanceVariableFloat, ns: , asm: Assembly-CSharp}
+      data:
+        Name: Float
+        Value: 2
+    - rid: 3701608415716442167
+      type: {class: InstanceVariableInt, ns: , asm: Assembly-CSharp}
+      data:
+        Name: Int
+        Value: 1
+    - rid: 3701608415716442168
+      type: {class: InstanceVariableFloat, ns: , asm: Assembly-CSharp}
+      data:
+        Name: Damage
+        Value: 10
+    - rid: 3701608415716442169
+      type: {class: InstanceVariableFloat, ns: , asm: Assembly-CSharp}
+      data:
+        Name: BonusAs
+        Value: 1.25
+    - rid: 3701608415716442170
+      type: {class: NodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: b7af2454-60e3-4841-8b0b-2814f89dd59c
+        Position: {x: 300, y: 250.00002}
+        DataType:
+          m_AssemblyQualifiedName: NodeData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: RootNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeRootNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames:
+        - Active
+    - rid: 3701608415716442171
+      type: {class: SFXNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 361482fc-2902-4860-b101-3616ed26ffd5
+        Position: {x: 1738.6666, y: 546}
+        DataType:
+          m_AssemblyQualifiedName: SFXNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: SFXNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeSFXNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        AudioSettings:
+        - audioClip: {fileID: 8300000, guid: 9899782a49e9e3445baf2b77689bbd7b, type: 3}
+          pitchVariation: {x: -0.05, y: 0.05}
+          volume: 77.4
+    - rid: 3701608415716442172
+      type: {class: BuffNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 8e1af2cd-3a65-422f-a59d-c8e0d567b671
+        Position: {x: 2095.3333, y: 546}
+        DataType:
+          m_AssemblyQualifiedName: BuffNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: TimeBuffNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeTimeBuffNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        IsDebuff: 0
+        Duration: 3
+        Icon: {fileID: 21300000, guid: 08d8417190e0a21499a730b7e06d64db, type: 3}
+        Tooltip: 
+    - rid: 3701608415716442173
+      type: {class: StatNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 841b9e51-5fdb-4e1f-bccb-04868e927257
+        Position: {x: 2433.3333, y: 546}
+        DataType:
+          m_AssemblyQualifiedName: StatNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: GetStatNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeGetStatNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames:
+        - Value
+        Target: Player
+        Stat: Ad
+    - rid: 3701608415716442174
+      type: {class: StatNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 8717d959-33b3-4ac8-9bc6-77383d6b769f
+        Position: {x: 2823.3333, y: 546}
+        DataType:
+          m_AssemblyQualifiedName: 
+        EditorType:
+          m_AssemblyQualifiedName: SetStatNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeSetStatNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames:
+        - Value
+        OutputPortNames:
+        - New Value
+        - Old Value
+        Target: Player
+        Stat: Ad
+    - rid: 3701608415716442175
+      type: {class: NodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 6fbead8c-87cc-4dd3-9529-26fced1dd97b
+        Position: {x: 2684, y: 422}
+        DataType:
+          m_AssemblyQualifiedName: NodeData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: MathBasicAddNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeMathBasicAddNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames:
+        - A
+        - B
+        OutputPortNames:
+        - Output
+    - rid: 3701608415716442176
+      type: {class: VarNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: c4dde53f-3916-4565-a0ed-c740cc4cbb01
+        Position: {x: 2518, y: 411.3333}
+        DataType:
+          m_AssemblyQualifiedName: VarNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: VariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeVariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        VarName: BonusAd
+        VarType:
+          m_AssemblyQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+    - rid: 3701608415716442177
+      type: {class: VarNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 8950cb2a-232b-4c44-83c8-b5243e3b1d12
+        Position: {x: 1106.6666, y: 160.66667}
+        DataType:
+          m_AssemblyQualifiedName: VarNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: VariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeVariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        VarName: Counter
+        VarType:
+          m_AssemblyQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+    - rid: 3701608415716442178
+      type: {class: VarNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 3b381d75-7942-4e3a-9764-28897a7980e5
+        Position: {x: 1156, y: 242.00002}
+        DataType:
+          m_AssemblyQualifiedName: VarNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: VariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeVariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        VarName: Float
+        VarType:
+          m_AssemblyQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+    - rid: 3701608415716442179
+      type: {class: ComparisonNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 112f6b9b-c45c-4f55-8e2d-b4dbe1f685fb
+        Position: {x: 1298.6666, y: 242.00002}
+        DataType:
+          m_AssemblyQualifiedName: ComparisonNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: ConditionComparisonNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeConditionComparisonNode, Assembly-CSharp,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        InputPortNames:
+        - A
+        - B
+        OutputPortNames:
+        - Bool
+        Comparison: <
+    - rid: 3701608415716442180
+      type: {class: NodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: ebfb5a4e-ed24-4740-b0a0-32202d102144
+        Position: {x: 1522.6666, y: 348}
+        DataType:
+          m_AssemblyQualifiedName: NodeData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: ConditionBoolNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeConditionBoolNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames:
+        - Bool
+        OutputPortNames:
+        - True
+        - False
+    - rid: 3701608415716442181
+      type: {class: NodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: c8c155fb-7db4-4139-80c4-f91b85d9cbd7
+        Position: {x: 1002.6667, y: 360}
+        DataType:
+          m_AssemblyQualifiedName: NodeData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: CombatResetAutoAttackNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeCombatResetAutoAttackNode, Assembly-CSharp,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+    - rid: 3701608415716442182
+      type: {class: VFXNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 7113c8b6-e910-4669-9399-8405cd1f4f97
+        Position: {x: 419.33334, y: 262}
+        DataType:
+          m_AssemblyQualifiedName: VFXNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: VFXNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeVFXNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        Duration: 1
+        VFX: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
+        Prefab: {fileID: 3127757936071797935, guid: b66a97f811850034f9c8a4eb1f271205, type: 3}
+        TransformName: character/scourge/male/scourgemale_hd_bone_122
+    - rid: 3701608415716442183
+      type: {class: DamageNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: d57f9191-43ec-4907-a314-2bcc0fcae848
+        Position: {x: 763.3333, y: 266}
+        DataType:
+          m_AssemblyQualifiedName: DamageNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: CombatDamageNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeCombatDamageNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames:
+        - Value
+        OutputPortNames:
+        - Caused damage
+        DamageType: True
+    - rid: 3701608415716442184
+      type: {class: VarNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 59b712e0-4892-438e-8d77-9f9a0df1c3f5
+        Position: {x: 652, y: 206}
+        DataType:
+          m_AssemblyQualifiedName: VarNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: VariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeVariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        VarName: Damage
+        VarType:
+          m_AssemblyQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+    - rid: 3701608415716442185
+      type: {class: NodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 44ef9c0f-fe56-49f2-b165-171d58352fd2
+        Position: {x: 3871.3333, y: 560}
+        DataType:
+          m_AssemblyQualifiedName: NodeData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: TimeWaitNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeTimeWaitNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames:
+        - Time
+        OutputPortNames: []
+    - rid: 3701608415716442186
+      type: {class: StatNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 43b91629-ddcc-4a97-999c-b66ffe0e2452
+        Position: {x: 4054.6667, y: 560}
+        DataType:
+          m_AssemblyQualifiedName: 
+        EditorType:
+          m_AssemblyQualifiedName: SetStatNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeSetStatNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames:
+        - Value
+        OutputPortNames:
+        - New Value
+        - Old Value
+        Target: Player
+        Stat: Ad
+    - rid: 3701608415716442187
+      type: {class: VarNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 985dba69-43eb-44e6-b071-71a65e81f2bb
+        Position: {x: 3776.6667, y: 448}
+        DataType:
+          m_AssemblyQualifiedName: VarNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: VariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeVariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        VarName: 3
+        VarType:
+          m_AssemblyQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+    - rid: 3701608415716442188
+      type: {class: StatNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 4cc49b3c-bc6f-4b07-b33e-5ea1b27edd7c
+        Position: {x: 4054, y: 777.3334}
+        DataType:
+          m_AssemblyQualifiedName: 
+        EditorType:
+          m_AssemblyQualifiedName: SetStatNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeSetStatNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames:
+        - Value
+        OutputPortNames:
+        - New Value
+        - Old Value
+        Target: Player
+        Stat: AttackSpeed
+    - rid: 3701608415716442189
+      type: {class: StatNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: a335d7ae-02cd-45dc-9f6b-9c4ffc070b81
+        Position: {x: 2433.3333, y: 761.3334}
+        DataType:
+          m_AssemblyQualifiedName: StatNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: GetStatNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeGetStatNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames:
+        - Value
+        Target: Player
+        Stat: AttackSpeed
+    - rid: 3701608415716442190
+      type: {class: StatNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: bcb14d46-19a3-4594-b4c9-a4ae2a074e86
+        Position: {x: 2823.3333, y: 816}
+        DataType:
+          m_AssemblyQualifiedName: 
+        EditorType:
+          m_AssemblyQualifiedName: SetStatNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeSetStatNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames:
+        - Value
+        OutputPortNames:
+        - New Value
+        - Old Value
+        Target: Player
+        Stat: AttackSpeed
+    - rid: 3701608415716442191
+      type: {class: NodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: ea94db15-5ee7-443d-9ced-8ff6d5833d72
+        Position: {x: 2684, y: 982.6667}
+        DataType:
+          m_AssemblyQualifiedName: NodeData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: MathBasicMultiplyNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeMathBasicMultiplyNode, Assembly-CSharp,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        InputPortNames:
+        - A
+        - B
+        OutputPortNames:
+        - Output
+    - rid: 3701608415716442192
+      type: {class: VarNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: c318185e-b2da-49f4-98a6-316185eed2ba
+        Position: {x: 2518.6667, y: 982.6667}
+        DataType:
+          m_AssemblyQualifiedName: VarNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: VariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeVariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        VarName: BonusAs
+        VarType:
+          m_AssemblyQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+    - rid: 3701608415716442193
+      type: {class: SetVarNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: bc77c026-09a8-4574-ad79-56d93acf6a0f
+        Position: {x: 3350.6667, y: 671.3334}
+        DataType:
+          m_AssemblyQualifiedName: SetVarNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: SetVarNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeSetVarNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames:
+        - Value
+        OutputPortNames:
+        - New Value
+        - Old Value
+        SelectedVariable: Counter
+        Variables:
+        - BonusAd
+        - Counter
+        - 1
+        - 0
+        - 3
+        - Float
+        - Int
+        - Damage
+        - BonusAs
+        SelectedVariableType:
+          m_AssemblyQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        VariableTypes:
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableInt, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+    - rid: 3701608415716442194
+      type: {class: VarNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: f884e50e-5db6-40ad-b8c4-ebfa6db56614
+        Position: {x: 3258.6667, y: 664.6667}
+        DataType:
+          m_AssemblyQualifiedName: VarNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: VariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeVariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        VarName: 0
+        VarType:
+          m_AssemblyQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+    - rid: 3701608415716442195
+      type: {class: SFXNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: f7e3bdf6-5eda-40d6-9380-e05958db2635
+        Position: {x: 1738.6666, y: -166}
+        DataType:
+          m_AssemblyQualifiedName: SFXNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: SFXNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeSFXNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        AudioSettings:
+        - audioClip: {fileID: 8300000, guid: 020dba1e9af733b48a62b2f51c4a218f, type: 3}
+          pitchVariation: {x: -0.05, y: 0.05}
+          volume: 30.3
+        - audioClip: {fileID: 8300000, guid: 5d2a254365f911d40995fb9768133e2d, type: 3}
+          pitchVariation: {x: -0.05, y: 0.05}
+          volume: 34.8
+        - audioClip: {fileID: 8300000, guid: cbf7d897f8ce4b040a288a3188bd6ddf, type: 3}
+          pitchVariation: {x: -0.05, y: 0.05}
+          volume: 34.8
+        - audioClip: {fileID: 8300000, guid: 9f67189c51ad8ae41991f3bc3338bf50, type: 3}
+          pitchVariation: {x: -0.05, y: 0.05}
+          volume: 37
+        - audioClip: {fileID: 8300000, guid: 871caedbc3013d44c8c0ffe2e6facf7c, type: 3}
+          pitchVariation: {x: -0.05, y: 0.05}
+          volume: 38.2
+    - rid: 3701608415716442196
+      type: {class: SetVarNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 09388f04-4221-4bc2-a61c-08073e6bd1d1
+        Position: {x: 2423.3333, y: 34}
+        DataType:
+          m_AssemblyQualifiedName: SetVarNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: SetVarNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeSetVarNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames:
+        - Value
+        OutputPortNames:
+        - New Value
+        - Old Value
+        SelectedVariable: Counter
+        Variables:
+        - BonusAd
+        - Counter
+        - 1
+        - 0
+        - 3
+        - Float
+        - Int
+        - Damage
+        - BonusAs
+        SelectedVariableType:
+          m_AssemblyQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        VariableTypes:
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableInt, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        - m_AssemblyQualifiedName: InstanceVariableFloat, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+    - rid: 3701608415716442197
+      type: {class: VarNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 9719931f-4cdd-457d-8172-d32cbccc59ff
+        Position: {x: 2133.3333, y: -86}
+        DataType:
+          m_AssemblyQualifiedName: VarNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: VariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeVariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        VarName: 1
+        VarType:
+          m_AssemblyQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+    - rid: 3701608415716442198
+      type: {class: VarNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 7f3bdf22-3065-4204-9355-33fe8913fb2d
+        Position: {x: 2161.3333, y: -131.33333}
+        DataType:
+          m_AssemblyQualifiedName: VarNodeData, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: VariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeVariableNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames: []
+        OutputPortNames: []
+        VarName: Counter
+        VarType:
+          m_AssemblyQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+    - rid: 3701608415716442199
+      type: {class: NodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Id: 8c2c756d-6bed-40c3-a06c-8024f5641dea
+        Position: {x: 2338.6667, y: -156}
+        DataType:
+          m_AssemblyQualifiedName: NodeData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        EditorType:
+          m_AssemblyQualifiedName: MathBasicAddNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        RuntimeType:
+          m_AssemblyQualifiedName: RuntimeMathBasicAddNode, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        InputPortNames:
+        - A
+        - B
+        OutputPortNames:
+        - Output

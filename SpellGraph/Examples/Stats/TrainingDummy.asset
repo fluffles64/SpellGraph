@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9883166ed32529d4babfba76efc3b3b9, type: 3}
+  m_Name: TrainingDummy
+  m_EditorClassIdentifier: 
+  name: TrainingDummy
+  ad:
+    isDirty: 1
+    lastBaseValue: -3.4028235e+38
+    value: 0
+    BaseValue: 3
+  ap:
+    isDirty: 1
+    lastBaseValue: 0
+    value: 1300
+    BaseValue: 0
+  attackSpeed:
+    isDirty: 0
+    lastBaseValue: 1
+    value: 1
+    BaseValue: 1
+  critChance:
+    isDirty: 1
+    lastBaseValue: -3.4028235e+38
+    value: 0
+    BaseValue: 100
+  critDamage:
+    isDirty: 1
+    lastBaseValue: -3.4028235e+38
+    value: 0
+    BaseValue: 0
+  armorPen:
+    isDirty: 1
+    lastBaseValue: -3.4028235e+38
+    value: 0
+    BaseValue: 0
+  flatArmorPen:
+    isDirty: 1
+    lastBaseValue: -3.4028235e+38
+    value: 0
+    BaseValue: 0
+  magicPen:
+    isDirty: 1
+    lastBaseValue: -3.4028235e+38
+    value: 0
+    BaseValue: 0
+  flatMagicPen:
+    isDirty: 1
+    lastBaseValue: -3.4028235e+38
+    value: 0
+    BaseValue: 0
+  lifeSteal:
+    isDirty: 1
+    lastBaseValue: -3.4028235e+38
+    value: 0
+    BaseValue: 0
+  ar:
+    isDirty: 1
+    lastBaseValue: -3.4028235e+38
+    value: 0
+    BaseValue: 10
+  mr:
+    isDirty: 1
+    lastBaseValue: -3.4028235e+38
+    value: 0
+    BaseValue: 5
+  tenacity:
+    isDirty: 1
+    lastBaseValue: -3.4028235e+38
+    value: 0
+    BaseValue: 0
+  moveSpeed:
+    isDirty: 0
+    lastBaseValue: 10
+    value: 10
+    BaseValue: 10
+  abilityHaste:
+    isDirty: 1
+    lastBaseValue: -3.4028235e+38
+    value: 0
+    BaseValue: 100
+  meleeRange:
+    isDirty: 0
+    lastBaseValue: 2
+    value: 2
+    BaseValue: 2
+  rangedRange:
+    isDirty: 0
+    lastBaseValue: 2
+    value: 2
+    BaseValue: 2
+  goldGeneration:
+    isDirty: 1
+    lastBaseValue: -3.4028235e+38
+    value: 0
+    BaseValue: 0
+  health: 500
+  maxHealth:
+    isDirty: 0
+    lastBaseValue: 500
+    value: 500
+    BaseValue: 500
+  healthRegen:
+    isDirty: 0
+    lastBaseValue: 0
+    value: 0
+    BaseValue: 0
+  healthRegenRate:
+    isDirty: 0
+    lastBaseValue: 5
+    value: 5
+    BaseValue: 5
+  resourceObj: {fileID: 11400000, guid: c1146390ecca7ac42939a4d3d6dee569, type: 2}
+  resource: 82
+  maxResource:
+    isDirty: 0
+    lastBaseValue: 100
+    value: 100
+    BaseValue: 100
+  resourceRegen:
+    isDirty: 0
+    lastBaseValue: 1
+    value: 1
+    BaseValue: 1
+  resourceRegenRate:
+    isDirty: 0
+    lastBaseValue: 1
+    value: 1
+    BaseValue: 1
