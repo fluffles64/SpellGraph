@@ -16,7 +16,7 @@
 
 https://github.com/fluffles64/SpellGraph/assets/61605339/7d5e01b0-ac3b-4eaa-9306-46375a23e009
 
-*Disclaimer*: This video shows a practical application of the SpellGraph framework. All four abilities shown in the video were fully created using nodes. The contents shown in the video are from a personal project and may contain copyrighted content.
+*Disclaimer*: The video showcases a practical application of the SpellGraph framework. All four abilities shown in the video were fully created using nodes. The contents of the video are from a personal project and might be subject to copyright restrictions.
 
 ## Features
 - **User-friendly node-based Interface**: Create complex abilities without writing a single line of code.
@@ -281,7 +281,7 @@ Many design decisions are based on the OOP paradigm, following best practices an
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0.
+This project is licensed under the [GNU General Public License v3.0](LICENSE.md).
 
 ## Third-Party Code
 
